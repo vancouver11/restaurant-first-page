@@ -1,0 +1,21 @@
+%btn 
+    border: 0px solid
+    background-image: url(../images/arrow.png)
+    background-size: cover
+    width: 70px
+    height: 70px
+    margin-top: 150px
+    transform: translateY(-50%)
+    cursor: pointer
+    
+.btn_left
+    @extend  %btn
+    float: left
+    margin-left: 1rem
+       
+.btn_right
+    @extend  %btn
+    float: right
+    transform: translateY(-50%) rotate(180deg)
+    margin-right: 1rem
+        

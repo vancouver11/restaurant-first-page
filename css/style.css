@@ -1,0 +1,525 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+body {
+  font-family: Arial; }
+
+#main-menu {
+  border: 0px solid;
+  width: 100%;
+  height: 120px;
+  background-color: rgba(200, 185, 185, 0.7);
+  position: fixed;
+  z-index: 2;
+  color: black; }
+  #main-menu .icon_menu {
+    display: none;
+    border: 1px solid;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    background: white;
+    left: 90%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    cursor: pointer; }
+    #main-menu .icon_menu .central_strip {
+      background: black;
+      width: 90%;
+      height: 3px;
+      padding-top: 0;
+      padding-bottom: 0;
+      position: absolute;
+      top: 50%;
+      margin-left: 50%;
+      transform: translate(-50%); }
+      #main-menu .icon_menu .central_strip:before {
+        content: "";
+        display: block;
+        background: black;
+        width: 100%;
+        height: 3px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        top: -8px; }
+      #main-menu .icon_menu .central_strip:after {
+        content: "";
+        display: block;
+        background: black;
+        width: 100%;
+        height: 3px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        top: 8px; }
+    #main-menu .icon_menu .cross {
+      background: white; }
+      #main-menu .icon_menu .cross:before {
+        top: -50%;
+        left: -50%;
+        transform: translateX(0%) rotate(-45deg); }
+      #main-menu .icon_menu .cross:after {
+        top: -50%;
+        left: -50%;
+        transform: translateX(0%) rotate(45deg); }
+  #main-menu div {
+    border: 0px solid;
+    float: left;
+    height: 112px;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem; }
+  #main-menu .logo {
+    width: 26%;
+    padding: 0.2rem 0 0.2rem 0.4rem; }
+    #main-menu .logo span {
+      font-size: 1.4rem;
+      display: inline-block;
+      vertical-align: top;
+      margin: 2.4rem 0 0 1rem; }
+    #main-menu .logo img {
+      width: 100px;
+      border: 0 solid; }
+  #main-menu .menu {
+    text-align: center; }
+    #main-menu .menu i {
+      margin: 5px;
+      display: none; }
+    #main-menu .menu .menuBar {
+      margin-top: 50px;
+      transform: translateY(-50%); }
+      #main-menu .menu .menuBar li {
+        display: inline-block;
+        padding: 0.5rem;
+        position: relative; }
+        #main-menu .menu .menuBar li:hover .fallList {
+          top: 27px;
+          visibility: visible;
+          opacity: 1; }
+        #main-menu .menu .menuBar li a:hover {
+          color: white; }
+        #main-menu .menu .menuBar li .fallList {
+          position: absolute;
+          left: 0;
+          top: 70px;
+          border: 0px solid;
+          background: red;
+          padding: 0;
+          opacity: 0;
+          transition: top 0.8s ease , opacity 0.6s ease 0s, visibility 1s linear 0.2s;
+          visibility: hidden; }
+          #main-menu .menu .menuBar li .fallList .fallItem {
+            display: block;
+            border: 0px solid;
+            margin: 0;
+            text-align: center;
+            padding: 0; }
+            #main-menu .menu .menuBar li .fallList .fallItem a {
+              color: white;
+              background-color: brown;
+              width: 100%;
+              display: block;
+              padding: 0.2rem 1rem; }
+      #main-menu .menu .menuBar a {
+        color: black;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 1.2rem; }
+    #main-menu .menu span {
+      font-size: 0.8rem;
+      display: inline-block;
+      transform: rotate(90deg);
+      vertical-align: top; }
+    #main-menu .menu a:hover {
+      color: rgba(189, 25, 25, 0.7); }
+    #main-menu .menu .hover {
+      color: white; }
+    #main-menu .menu a.hover:hover {
+      color: grey; }
+  #main-menu .menu {
+    width: 69%; }
+
+header {
+  border: 1px solid;
+  height: 700px;
+  background-image: url(../images/header.jpg);
+  background-size: cover;
+  position: relative; }
+  header .slogan {
+    font-size: 1.8rem;
+    position: absolute;
+    bottom: 16rem;
+    left: 6rem;
+    border: 1px solid;
+    padding: 1rem;
+    color: white;
+    font-weight: bold;
+    background-color: rgba(189, 25, 25, 0.7); }
+  header .more {
+    font-size: 1rem;
+    text-decoration: none;
+    color: white;
+    position: absolute;
+    bottom: 10rem;
+    left: 6rem;
+    border: 1px solid;
+    border-radius: 0.4rem;
+    padding: 0.6rem 1.5rem;
+    background-color: rgba(189, 25, 25, 0.7); }
+
+nav {
+  border: 1px solid;
+  padding: 1rem;
+  text-align: center; }
+  nav ul {
+    list-style: none; }
+    nav ul li {
+      display: inline-block;
+      margin-right: 1rem; }
+      nav ul li a {
+        font-size: 0.8rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #bd1919;
+        font-weight: 600; }
+        nav ul li a:hover {
+          color: rgba(189, 25, 25, 0.7); }
+
+#slider {
+  border: 1px solid;
+  overflow: auto; }
+  #slider .visible_area {
+    overflow: hidden;
+    position: relative;
+    border: 1px solid;
+    width: 70%;
+    height: 300px;
+    margin: 10px auto;
+    min-width: 400px; }
+    #slider .visible_area ul {
+      list-style: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 0;
+      transition: left 3.2s ease; }
+      #slider .visible_area ul li {
+        font-size: 0rem;
+        display: inline-block;
+        background: url(./images/dish1.jpg) no-repeat;
+        width: 1000px;
+        height: 300px;
+        background-size: cover;
+        background-position: center;
+        cursor: pointer; }
+        #slider .visible_area ul li .ex {
+          position: absolute;
+          width: 300px;
+          height: 150px;
+          bottom: 20px;
+          background-repeat: no-repeat;
+          background-size: 50%;
+          z-index: 1; }
+        #slider .visible_area ul li .infoText {
+          transform: translateX(0%);
+          width: 300px;
+          height: 90%;
+          border: 1px solid white;
+          border-radius: 8px;
+          margin: 6px 6px;
+          background-color: rgba(255, 255, 255, 0.6);
+          font-size: 1rem;
+          position: absolute; }
+          #slider .visible_area ul li .infoText h2 {
+            text-align: center;
+            margin-bottom: 0.4rem; }
+          #slider .visible_area ul li .infoText p {
+            margin: 0 2% 0 2%; }
+
+#insted-of-slider {
+  display: none; }
+
+.btn_left, .btn_right {
+  border: 0px solid;
+  background-image: url(../images/arrow.png);
+  background-size: cover;
+  width: 70px;
+  height: 70px;
+  margin-top: 150px;
+  transform: translateY(-50%);
+  cursor: pointer; }
+
+.btn_left {
+  float: left;
+  margin-left: 1rem; }
+
+.btn_right {
+  float: right;
+  transform: translateY(-50%) rotate(180deg);
+  margin-right: 1rem; }
+
+#offers {
+  border: 1px solid;
+  padding: 1.2rem 1.6rem 1rem 2rem;
+  background-color: #bd1919;
+  text-align: center; }
+  #offers .block-info {
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+    display: inline-block;
+    width: 25%;
+    margin-bottom: 0.1rem; }
+    #offers .block-info a {
+      color: white;
+      text-decoration: none; }
+      #offers .block-info a:hover {
+        color: #b5a7a7; }
+  #offers .banners-offers {
+    width: 80%;
+    border: 0px solid red;
+    clear: both;
+    padding: 10px 0;
+    margin-top: 2rem;
+    overflow: hidden;
+    margin: auto; }
+    #offers .banners-offers .wrapper-banners {
+      border: 1px solid white;
+      position: relative;
+      overflow: hidden;
+      height: 300px;
+      width: 100%;
+      left: 0; }
+      #offers .banners-offers .wrapper-banners .contain {
+        width: 100%;
+        position: absolute;
+        background: white;
+        height: 300px;
+        left: 0;
+        transition: all 1.5s; }
+        #offers .banners-offers .wrapper-banners .contain a {
+          color: rgba(189, 25, 25, 0.7);
+          font-weight: bold; }
+      #offers .banners-offers .wrapper-banners .banner {
+        position: absolute;
+        display: block;
+        width: 33.33%;
+        height: 80%;
+        background: black;
+        background: url(../images/dish4.jpg) no-repeat;
+        background-size: cover; }
+      #offers .banners-offers .wrapper-banners .more {
+        position: absolute;
+        top: 80%;
+        width: 100%;
+        height: 20%;
+        text-align: center;
+        padding-top: 20px; }
+
+#application-link {
+  border: 1px solid;
+  padding: 1rem;
+  background-image: url(../images/app.jpg);
+  background-position: center;
+  background-size: cover; }
+  #application-link .header {
+    color: #bd1919;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase; }
+  #application-link .load .app-title {
+    margin: 1rem 0;
+    color: #bd1919;
+    font-size: 1.2rem;
+    font-style: italic; }
+  #application-link .load img {
+    display: block; }
+
+footer {
+  font-size: 0px;
+  background-color: #bd1919;
+  color: white; }
+  footer .contact {
+    width: 30%;
+    padding-left: 1rem; }
+  footer div {
+    vertical-align: top;
+    border: 0px solid;
+    display: inline-block;
+    width: 17%;
+    font-size: 0.8rem;
+    padding-top: 0.6rem; }
+    footer div p {
+      margin: 0.4rem 0;
+      padding: 0.4rem; }
+    footer div .phone {
+      color: #b5a7a7; }
+      footer div .phone span {
+        font-size: 1.6rem;
+        font-weight: bold; }
+    footer div h2 {
+      margin: 0.4rem 0; }
+    footer div img {
+      width: 90px; }
+    footer div ul {
+      list-style: none; }
+    footer div li {
+      margin: 0.8rem 0; }
+  footer a {
+    color: white;
+    text-decoration: none; }
+    footer a:hover {
+      color: #b5a7a7; }
+
+.layout {
+  width: 980px;
+  margin: 0 auto;
+  overflow: hidden; }
+
+@media screen and (max-width: 960px), only screen and (max-device-width: 960px) {
+  #main-menu .menu {
+    width: 74%; }
+    #main-menu .menu ul li {
+      padding-left: 0px; }
+  #main-menu .logo {
+    width: 15%; }
+    #main-menu .logo img {
+      width: 50px; }
+    #main-menu .logo span {
+      font-size: 1rem;
+      display: block;
+      margin: 0.1em 0 0 0.2rem; } }
+
+@media screen and (max-width: 860px), only screen and (max-device-width: 860px) {
+  #main-menu .menu {
+    width: 100%;
+    text-align: center;
+    height: 0; }
+    #main-menu .menu .menuBar {
+      display: none;
+      list-style: none;
+      margin-top: 0;
+      transform: translateY(0);
+      background: #bd1919; }
+      #main-menu .menu .menuBar li {
+        border-bottom: 1px solid;
+        display: block; }
+        #main-menu .menu .menuBar li .fallList {
+          display: none;
+          position: static;
+          border: 0px solid;
+          background: none;
+          padding: 0;
+          opacity: 1;
+          transition: top 0.8s ease, opacity 0.6s ease 0s, visibility 1s linear 0.2s;
+          visibility: visible;
+          text-align: center; }
+          #main-menu .menu .menuBar li .fallList .fallItem a {
+            color: black;
+            background-color: rgba(0, 0, 0, 0);
+            text-align: center;
+            padding: 0;
+            margin-top: 0.2rem; }
+            #main-menu .menu .menuBar li .fallList .fallItem a:hover {
+              color: rgba(189, 25, 25, 0.7); }
+          #main-menu .menu .menuBar li .fallList .fallItem:hover {
+            background: white; }
+    #main-menu .menu .open {
+      display: block; }
+  #main-menu .icon_menu {
+    display: block; }
+  #main-menu .logo {
+    width: 19%; }
+    #main-menu .logo img {
+      width: 40px; } }
+
+@media screen and (max-width: 800px), only screen and (max-device-width: 800px) {
+  html {
+    font-size: 18px; }
+    html nav ul li {
+      margin-bottom: 0.4em; }
+  header .slogan {
+    font-size: 1.6rem; }
+  footer .contact {
+    width: 47%; }
+  footer div {
+    width: 47%;
+    padding-left: 0.8rem; } }
+
+@media screen and (max-width: 700px), only screen and (max-device-width: 700px) {
+  html {
+    font-size: 22px; }
+  header .slogan {
+    left: 0;
+    font-size: 1.4rem; }
+  nav ul li {
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem; }
+    nav ul li a {
+      font-size: 1.1rem; }
+  #offers {
+    display: none; }
+  #slider .btn_left {
+    width: 30px;
+    height: 30px; }
+  #slider .btn_right {
+    width: 30px;
+    height: 30px; } }
+
+@media screen and (max-width: 600px), only screen and (max-device-width: 600px) {
+  html {
+    font-size: 24px; }
+  footer .contact {
+    width: 80%; } }
+
+@media screen and (max-width: 560px), only screen and (max-device-width: 560px) {
+  html {
+    font-size: 25px; }
+  #slider .visible_area {
+    max-width: 360px;
+    min-width: 300px; } }
+
+@media screen and (max-width: 480px), only screen and (max-device-width: 480px) {
+  html {
+    font-size: 25px; }
+  #main-menu .icon_menu {
+    left: 80%; }
+  #slider .btn_left {
+    margin-top: 20px; }
+  #slider .btn_right {
+    margin-top: 20px; }
+  #slider .visible_area {
+    width: 100%; }
+  header {
+    height: 500px; }
+    header .slogan {
+      bottom: 5rem; }
+    header .more {
+      bottom: 2rem; }
+  footer div {
+    font-size: 1.2rem; }
+  #application-link .header {
+    font-size: 1.2rem; } }
+
+@media screen and (max-width: 395px), only screen and (max-device-width: 395px) {
+  html {
+    font-size: 22px; }
+  header {
+    height: 400px; }
+    header .slogan {
+      padding: 0.5rem; }
+  #insted-of-slider {
+    display: block; }
+  #slider {
+    display: none; }
+  header .more {
+    left: 0; } }
+
+@media screen and (max-width: 320px), only screen and (max-device-width: 320px) {
+  html {
+    font-size: 20px; }
+  #slider {
+    display: none; }
+  footer div {
+    font-size: 1.3rem; } }

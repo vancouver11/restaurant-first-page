@@ -1,0 +1,178 @@
+.layout
+    width: 980px
+    margin: 0 auto
+    overflow: hidden
+@media screen and (max-width: 960px), only screen and (max-device-width: 960px)
+    #main-menu 
+        .menu
+            width: 74%
+            ul
+                li
+                    padding-left: 0px
+
+        .logo
+            width: 15%
+            img
+                width: 50px
+            span
+                font-size: 1rem
+                display: block
+                margin: 0.1em 0 0 0.2rem
+
+@media screen and (max-width: 860px), only screen and (max-device-width: 860px)
+    #main-menu 
+        .menu
+            width: 100%
+            text-align: center
+            height: 0
+            .menuBar
+                display: none
+                list-style: none
+                margin-top: 0
+                transform: translateY(0)
+                background: rgb(189, 25, 25)
+                li
+                    border-bottom: 1px solid
+                    display: block
+                    .fallList 
+                        display: none
+                        position: static 
+                        border: 0px solid 
+                        background: none 
+                        padding: 0
+                        opacity: 1
+                        transition: top 0.8s ease, opacity 0.6s ease 0s, visibility 1s linear 0.2s
+                        visibility: visible
+                        text-align: center
+                       
+                        .fallItem
+                            
+                            a
+                                color: black
+                                background-color: rgba(0,0,0,0)
+                                text-align: center
+                                padding: 0
+                                margin-top: 0.2rem
+                                &:hover
+                                    color: $nav-hover
+                            &:hover
+                                background: white
+            .open
+                display: block
+        .icon_menu
+            display: block
+            
+            
+        .logo
+            width: 19%
+            img
+                width: 40px
+            
+
+            
+
+@media screen and (max-width: 800px), only screen and (max-device-width: 800px)
+    html
+        font-size: 18px
+        nav
+            ul
+                li 
+                    margin-bottom: 0.4em
+    header
+        .slogan
+            font-size: 1.6rem
+    footer
+        .contact
+            width: 47%
+        div
+            width: 47%
+            padding-left: 0.8rem
+
+@media screen and (max-width: 700px), only screen and (max-device-width: 700px)
+    html
+        font-size: 22px
+    header
+        .slogan
+            left: 0
+            font-size: 1.4rem
+    nav
+        ul
+            li
+                margin-bottom: 0.5rem
+                margin-top: 0.5rem
+                a
+                    font-size: 1.1rem
+    #offers
+        display: none
+    #slider
+        .btn_left
+            width: 30px
+            height: 30px
+        .btn_right
+            width: 30px
+            height: 30px            
+
+@media screen and (max-width: 600px), only screen and (max-device-width: 600px)
+    html
+        font-size: 24px
+    footer
+        .contact
+            width: 80%    
+
+@media screen and (max-width: 560px), only screen and (max-device-width: 560px)
+    html
+        font-size: 25px
+    #slider
+        .visible_area
+            max-width: 360px
+            min-width: 300px
+
+@media screen and (max-width: 480px), only screen and (max-device-width: 480px)
+    html
+        font-size: 25px
+    #main-menu 
+        .icon_menu
+            left: 80%
+    #slider
+        .btn_left
+            margin-top: 20px
+        .btn_right
+            margin-top: 20px
+        .visible_area
+            width: 100%
+    header
+        height: 500px
+        .slogan
+            bottom: 5rem
+        .more
+            bottom: 2rem
+    footer div
+        font-size: 1.2rem
+    #application-link .header
+        font-size: 1.2rem
+@media screen and (max-width: 395px), only screen and (max-device-width: 395px)
+    html
+        font-size: 22px
+    header
+        height: 400px
+        .slogan
+            padding: 0.5rem
+    #insted-of-slider
+        display: block
+    #slider
+        display: none
+    header
+        .more
+            left: 0
+@media screen and (max-width: 320px), only screen and (max-device-width: 320px)
+    html
+        font-size: 20px
+    #slider
+        display: none
+    footer div
+        font-size: 1.3rem
+
+    
+
+  
+
